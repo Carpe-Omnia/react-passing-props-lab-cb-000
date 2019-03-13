@@ -12,8 +12,7 @@ class App extends React.Component {
     this.state = {
       filters: [],
       selectedFilter: null,
-      items: [],
-      selectedFilter: null
+      items: []
     }
     this.handleFilterChange = this.handleFilterChange.bind(this) ;
     this.fetchFilters = this.fetchFilters.bind(this) ;
@@ -37,8 +36,7 @@ class App extends React.Component {
   }
   render() {
     var list = !this.state.selectedFilter || this.state.selectedFilter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.selectedFilter);
-  //  console.log("App is rendering") ;
-  //  console.log(list) ;
+
     return (
       <FruitBasket
       handleFilterChange={this.handleFilterChange}
