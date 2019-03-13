@@ -5,11 +5,7 @@ class FilteredFruitList extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    fetch('/api/fruit')
-      .then(response => response.json())
-      .then(items => this.setState({ items }));
-  }
+
 
   render() {
     const list = !this.props.filter || this.props.filter === 'all' ? this.props.items : this.props.items.filter(i => i.fruit_type === this.props.filter);
