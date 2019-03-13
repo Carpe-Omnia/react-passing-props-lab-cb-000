@@ -12,7 +12,8 @@ class App extends React.Component {
     this.state = {
       filters: [],
       selectedFilter: null,
-      items: []
+      items: [],
+      selectedFilter: null
     }
     this.handleFilterChange = this.handleFilterChange.bind(this) ;
     this.fetchFilters = this.fetchFilters.bind(this) ;
@@ -35,7 +36,7 @@ class App extends React.Component {
       .then(items => this.setState({ items }));
   }
   render() {
-    var list = !this.state.filter || this.state.filter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.filter);
+    var list = !this.state.Selectedfilter || this.state.Selectedfilter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.Selectedfilter);
     console.log("App is rendering") ;
     console.log(list) ;
     return (
