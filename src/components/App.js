@@ -35,7 +35,7 @@ class App extends React.Component {
       .then(items => this.setState({ items }));
   }
   render() {
-    const list = !this.props.filter || this.props.filter === 'all' ? this.props.items : this.props.items.filter(i => i.fruit_type === this.props.filter);
+    const list = !this.state.filter || this.state.filter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.filter);
     return (
       <FruitBasket
       handleFilterChange={this.handleFilterChange}
