@@ -6,6 +6,10 @@ import FilteredFruitList from './FilteredFruitList.js';
 
 
 class App extends React.Component {
+  constructor() {
+    super() ;
+
+  }
   render() {
     return (
       <FruitBasket />
