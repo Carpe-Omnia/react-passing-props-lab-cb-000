@@ -34,7 +34,7 @@ class App extends React.Component {
       <FruitBasket
       handleFilterChange={this.handleFilterChange}
       selectedFilter={this.state.selectedFilter}
-      filter
+      filters={this.state.filters}
       />
     )
   }
