@@ -3,21 +3,13 @@ import React, { Component }  from 'react';
 import Filter from './Filter';
 import FilteredFruitList from './FilteredFruitList.js';
 
-class FruitBasket extends Component {
-  constructor() {
-    super();
-
-  }
-
-  render() {
-    return (
+const FruitBasket = (props) => 
       <div className="fruit-basket">
         <Filter handleChange={this.props.handleFilterChange} />
         <FilteredFruitList
           filter={this.props.selectedFilter} />
-      </div>
-    );
-  }
-}
+      </div>;
+  
+
 
 export default FruitBasket;
