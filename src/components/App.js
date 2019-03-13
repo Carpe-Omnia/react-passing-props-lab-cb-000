@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <FruitBasket />
+      <FruitBasket handleFilterChange={this.handleFilterChange} selectedFilter={this.state.selectedFilter} />
     )
   }
 }
