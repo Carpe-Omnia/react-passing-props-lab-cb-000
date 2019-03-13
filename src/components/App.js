@@ -39,7 +39,7 @@ class App extends React.Component {
 
     return (
       <FruitBasket
-      handleFilterChange={this.handleFilterChange}
+      handleChange={this.handleFilterChange}
       selectedFilter={this.state.selectedFilter}
       filters={this.state.filters}
       items={this.state.items}
