@@ -36,7 +36,7 @@ class App extends React.Component {
       .then(items => this.setState({ items }));
   }
   render() {
-    var list = !this.state.Selectedfilter || this.state.Selectedfilter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.Selectedfilter);
+    var list = !this.state.selectedFilter || this.state.selectedFilter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.selectedFilter);
     console.log("App is rendering") ;
     console.log(list) ;
     return (
