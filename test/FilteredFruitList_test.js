@@ -30,12 +30,12 @@ const fruit = [
 
 describe('<FilteredFruitList />', () => {
   let wrapper;
-/*
+
   beforeEach(() => {
     wrapper = !FilteredFruitList.prototype ? shallow(<Noop />) :
       shallow(<FilteredFruitList fruit={fruit} filter={null} />);
   });
-*/
+
   it('should be a stateless functional component', () => {
     const tryToGetState = () => { wrapper.state(); }
     expect(tryToGetState).to.throw(
