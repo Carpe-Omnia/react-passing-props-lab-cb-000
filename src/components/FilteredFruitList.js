@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 class FilteredFruitList extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      items: []
-    };
   }
 
   componentDidMount() {
