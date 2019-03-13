@@ -7,7 +7,8 @@ const FilteredFruitList = props =>
 
 FilteredFruitList.defaultProps = {
     fruit: [],
-    filter: null
+    filter: null,
+    list: [] 
 }
 
 export default FilteredFruitList;
