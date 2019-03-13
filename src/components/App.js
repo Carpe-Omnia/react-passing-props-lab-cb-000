@@ -14,6 +14,7 @@ class App extends React.Component {
       selectedFilter: null,
       items: []
     }
+    this.handleFilterChange = this.handleFilterChange.bind(this) ; 
   }
   handleFilterChange = event => {
     console.log('new filter: ', event.target.value);
