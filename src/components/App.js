@@ -36,7 +36,8 @@ class App extends React.Component {
   }
   render() {
     var list = !this.state.filter || this.state.filter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.filter);
-    console.log("App is rendering")
+    console.log("App is rendering") ; 
+    console.log(list) ;
     return (
       <FruitBasket
       handleFilterChange={this.handleFilterChange}
