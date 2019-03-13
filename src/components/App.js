@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       filters: [],
       selectedFilter: null,
-      items: []
+      fruit: []
     }
     this.handleFilterChange = this.handleFilterChange.bind(this) ;
     this.fetchFilters = this.fetchFilters.bind(this) ;
@@ -32,17 +32,17 @@ class App extends React.Component {
   componentDidMount() {
     fetch('/api/fruit')
       .then(response => response.json())
-      .then(items => this.setState({ items }));
+      .then(fruit => this.setState({ fruit }));
   }
   render() {
-    var list = !this.state.selectedFilter || this.state.selectedFilter === 'all' ? this.state.items : this.state.items.filter(i => i.fruit_type === this.state.selectedFilter);
+    var list = !this.state.selectedFilter || this.state.selectedFilter === 'all' ? this.state.fruit : this.state.fruit.filter(i => i.fruit_type === this.state.selectedFilter);
 
     return (
       <FruitBasket
       handleChange={this.handleFilterChange}
       selectedFilter={this.state.selectedFilter}
       filters={this.state.filters}
-      items={this.state.items}
+      items={this.state.fruit}
       list={list}
       />
     )
