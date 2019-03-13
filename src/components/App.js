@@ -19,7 +19,7 @@ class App extends React.Component {
     console.log('new filter: ', event.target.value);
     this.setState({ selectedFilter: event.target.value });
   }
-  
+
   render() {
     return (
       <FruitBasket />
