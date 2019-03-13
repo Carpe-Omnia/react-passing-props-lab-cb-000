@@ -10,7 +10,4 @@ const FruitBasket = props =>
           filter={props.selectedFilter} />
       </div>;
 
-
-
-
 export default FruitBasket;
