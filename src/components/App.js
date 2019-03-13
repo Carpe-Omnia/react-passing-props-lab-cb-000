@@ -29,12 +29,18 @@ class App extends React.Component {
   componentWillMount() {
     this.fetchFilters();
   }
+  componentDidMount() {
+    fetch('/api/fruit')
+      .then(response => response.json())
+      .then(items => this.setState({ items }));
+  }
   render() {
     return (
       <FruitBasket
       handleFilterChange={this.handleFilterChange}
       selectedFilter={this.state.selectedFilter}
       filters={this.state.filters}
+      items={this.state.items}
       />
     )
   }
