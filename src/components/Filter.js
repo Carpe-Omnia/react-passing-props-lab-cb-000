@@ -8,7 +8,7 @@ class Filter extends Component {
       filters: []
     };
   }
-
+/*
   componentWillMount() {
     this.fetchFilters();
   }
@@ -18,12 +18,12 @@ class Filter extends Component {
       .then(response => response.json())
       .then(filters => this.setState({ filters }));
   }
-
+*/
   render() {
     return (
       <select onChange={this.props.handleChange} defaultValue='all'>
         <option value='all'>All</option>
-        {this.state.filters.map(filter =>
+        {this.props.filters.map(filter =>
           <option key={filter} value={filter}>{filter}</option>
         )}
       </select>
