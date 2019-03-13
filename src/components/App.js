@@ -15,6 +15,7 @@ class App extends React.Component {
       items: []
     }
     this.handleFilterChange = this.handleFilterChange.bind(this) ;
+    this.fetchFilters = this.fetchFilters.bind(this) ;
   }
   handleFilterChange = event => {
     console.log('new filter: ', event.target.value);
@@ -33,6 +34,7 @@ class App extends React.Component {
       <FruitBasket
       handleFilterChange={this.handleFilterChange}
       selectedFilter={this.state.selectedFilter}
+      filter
       />
     )
   }
