@@ -20,10 +20,20 @@ class App extends React.Component {
     console.log('new filter: ', event.target.value);
     this.setState({ selectedFilter: event.target.value });
   }
-
+  fetchFilters = () => {
+    fetch('/api/fruit_types')
+      .then(response => response.json())
+      .then(filters => this.setState({ filters }));
+  }
+  componentWillMount() {
+    this.fetchFilters();
+  }
   render() {
     return (
-      <FruitBasket handleFilterChange={this.handleFilterChange} selectedFilter={this.state.selectedFilter} />
+      <FruitBasket
+      handleFilterChange={this.handleFilterChange}
+      selectedFilter={this.state.selectedFilter}
+      />
     )
   }
 }
