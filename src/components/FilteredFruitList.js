@@ -12,7 +12,7 @@ class FilteredFruitList extends Component {
 
     return (
       <ul className="fruit-list">
-        {list.map((item, index) => <li key={index}>{item.char}</li>)}
+        {this.props.list.map((item, index) => <li key={index}>{item.char}</li>)}
       </ul>
     );
   }
