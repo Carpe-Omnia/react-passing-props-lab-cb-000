@@ -8,5 +8,10 @@ const FruitBasket = props =>
         <Filter handleChange={props.handleChange} filters={props.filters} />
         <FilteredFruitList  list={props.list} />
       </div>;
-
+FruitBasket.defaultProps = {
+  fruit: [],
+  filters: [],
+  currentFilter: null,
+  updateFilterCallback: null
+}
 export default FruitBasket;
