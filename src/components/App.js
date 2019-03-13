@@ -9,6 +9,11 @@ class App extends React.Component {
   constructor() {
     super() ;
 
+    this.state = {
+      filters: [],
+      selectedFilter: null,
+      items: []
+    }
   }
   render() {
     return (
